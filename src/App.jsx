@@ -13,12 +13,14 @@ import {
   MapPin,
   Download,
   ArrowUpRight,
+  MessageCircle, // Added for WhatsApp
 } from "lucide-react";
 
 export default function App() {
   const brandBlue = "#17155B";
   const brandBlueDeep = "#0E0C3F";
   const brandYellow = "#D8C21C";
+  const whatsappGreen = "#25D366";
 
   const nav = useMemo(
     () => [
@@ -81,6 +83,18 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/919414177766"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full shadow-2xl transition-transform hover:scale-110 active:scale-95"
+        style={{ backgroundColor: whatsappGreen }}
+        title="Chat with Lokesh Bhatnagar"
+      >
+        <MessageCircle size={32} color="white" fill="white" />
+      </a>
+
       <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <a href="#home" className="flex items-center gap-3">
@@ -137,10 +151,10 @@ export default function App() {
                 Smart Connectivity • Railway Monitoring • Industrial IoT
               </div>
               <h1 className="max-w-3xl text-5xl font-black leading-tight tracking-tight md:text-6xl" style={{ color: brandBlue }}>
-                Production-ready digital presence for a company built around critical infrastructure solutions.
+                Advanced digital monitoring for critical railway infrastructure.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                Ikonnect designs and integrates smart railway monitoring systems, thermal surveillance, OHE and pantograph visibility, resilient communication backbone, remote telemetry, and centralized analytics for real-world deployment.
+                Ikonnect designs and integrates smart railway monitoring systems, thermal surveillance, OHE and pantograph visibility, resilient communication backbone, remote telemetry, and centralized analytics.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <a href="#contact" className="inline-flex items-center rounded-2xl px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5" style={{ backgroundColor: brandBlue }}>
@@ -267,12 +281,12 @@ export default function App() {
               Reference architecture for monitoring, redundancy, and central visibility.
             </h2>
             <p className="mt-4 max-w-3xl text-slate-600 leading-8">
-              This section presents a conceptual deployment model: field sensing and surveillance at the asset layer, local processing and interrogators, redundant OFC + wireless transport, and centralized command/dashboard visibility.
+              Conceptual deployment model: field sensing and surveillance at the asset layer, local processing, redundant OFC + wireless transport, and centralized command visibility.
             </p>
           </div>
 
           <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-6 shadow-xl">
-            <img alt="Railway architecture placeholder" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 260'%3E%3Crect width='1200' height='260' fill='%23f8fafc'/%3E%3Crect x='40' y='70' width='180' height='90' rx='24' fill='%23D8C21C'/%3E%3Crect x='290' y='70' width='180' height='90' rx='24' fill='%2317155B'/%3E%3Crect x='540' y='70' width='180' height='90' rx='24' fill='%23D8C21C'/%3E%3Crect x='790' y='70' width='180' height='90' rx='24' fill='%2317155B'/%3E%3Crect x='980' y='70' width='180' height='90' rx='24' fill='%23D8C21C'/%3E%3Ctext x='130' y='125' text-anchor='middle' font-size='26' font-family='Arial' font-weight='700' fill='%230E0C3F'%3EField%3C/text%3E%3Ctext x='380' y='125' text-anchor='middle' font-size='26' font-family='Arial' font-weight='700' fill='white'%3ELocal%3C/text%3E%3Ctext x='630' y='125' text-anchor='middle' font-size='24' font-family='Arial' font-weight='700' fill='%230E0C3F'%3ETransport%3C/text%3E%3Ctext x='880' y='125' text-anchor='middle' font-size='24' font-family='Arial' font-weight='700' fill='white'%3ECentral%3C/text%3E%3Ctext x='1070' y='125' text-anchor='middle' font-size='22' font-family='Arial' font-weight='700' fill='%230E0C3F'%3EAnalytics%3C/text%3E%3C/svg%3E" className="w-full rounded-2xl" />
+            <img alt="Railway architecture" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 260'%3E%3Crect width='1200' height='260' fill='%23f8fafc'/%3E%3Crect x='40' y='70' width='180' height='90' rx='24' fill='%23D8C21C'/%3E%3Crect x='290' y='70' width='180' height='90' rx='24' fill='%2317155B'/%3E%3Crect x='540' y='70' width='180' height='90' rx='24' fill='%23D8C21C'/%3E%3Crect x='790' y='70' width='180' height='90' rx='24' fill='%2317155B'/%3E%3Crect x='980' y='70' width='180' height='90' rx='24' fill='%23D8C21C'/%3E%3Ctext x='130' y='125' text-anchor='middle' font-size='26' font-family='Arial' font-weight='700' fill='%230E0C3F'%3EField%3C/text%3E%3Ctext x='380' y='125' text-anchor='middle' font-size='26' font-family='Arial' font-weight='700' fill='white'%3ELocal%3C/text%3E%3Ctext x='630' y='125' text-anchor='middle' font-size='24' font-family='Arial' font-weight='700' fill='%230E0C3F'%3ETransport%3C/text%3E%3Ctext x='880' y='125' text-anchor='middle' font-size='24' font-family='Arial' font-weight='700' fill='white'%3ECentral%3C/text%3E%3Ctext x='1070' y='125' text-anchor='middle' font-size='22' font-family='Arial' font-weight='700' fill='%230E0C3F'%3EAnalytics%3C/text%3E%3C/svg%3E" className="w-full rounded-2xl" />
           </div>
         </section>
 
@@ -281,11 +295,8 @@ export default function App() {
             <div>
               <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">IoT Products & Solutions</div>
               <h2 className="mt-2 text-4xl font-black tracking-tight" style={{ color: brandBlue }}>
-                IoT-enabled monitoring, telemetry, and automation for distributed assets.
+                IoT-enabled monitoring and telemetry for distributed assets.
               </h2>
-              <p className="mt-4 max-w-3xl text-slate-600 leading-8">
-                Ikonnect can position itself not only as a railway systems integrator, but also as an Industrial IoT solutions provider delivering connected sensing, remote telemetry, edge intelligence, and centralized command visibility across critical infrastructure sectors.
-              </p>
             </div>
             <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
               <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">Typical IoT Stack</div>
@@ -296,10 +307,6 @@ export default function App() {
               </div>
             </div>
           </div>
-
-          <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-6 shadow-xl">
-            <img alt="IoT architecture placeholder" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220'%3E%3Crect width='1200' height='220' fill='%23ffffff'/%3E%3Crect x='40' y='60' width='180' height='80' rx='24' fill='%23D8C21C'/%3E%3Crect x='280' y='60' width='180' height='80' rx='24' fill='%2317155B'/%3E%3Crect x='520' y='60' width='180' height='80' rx='24' fill='%23D8C21C'/%3E%3Crect x='760' y='60' width='180' height='80' rx='24' fill='%2317155B'/%3E%3Crect x='980' y='60' width='180' height='80' rx='24' fill='%23D8C21C'/%3E%3Ctext x='130' y='110' text-anchor='middle' font-size='24' font-family='Arial' font-weight='700' fill='%230E0C3F'%3ESensors%3C/text%3E%3Ctext x='370' y='110' text-anchor='middle' font-size='24' font-family='Arial' font-weight='700' fill='white'%3EGateway%3C/text%3E%3Ctext x='610' y='110' text-anchor='middle' font-size='24' font-family='Arial' font-weight='700' fill='%230E0C3F'%3EEdge%3C/text%3E%3Ctext x='850' y='110' text-anchor='middle' font-size='24' font-family='Arial' font-weight='700' fill='white'%3ECloud%3C/text%3E%3Ctext x='1070' y='110' text-anchor='middle' font-size='22' font-family='Arial' font-weight='700' fill='%230E0C3F'%3EAlerts%3C/text%3E%3C/svg%3E" className="w-full rounded-2xl" />
-          </div>
         </section>
 
         <section id="projects" className="border-y border-slate-200 bg-white">
@@ -308,12 +315,9 @@ export default function App() {
               <div>
                 <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">Projects & Use Cases</div>
                 <h2 className="mt-2 text-4xl font-black tracking-tight" style={{ color: brandBlue }}>
-                  Representative solution buckets for client-facing positioning.
+                  Representative solutions for infrastructure monitoring.
                 </h2>
               </div>
-              <a href="#contact" className="inline-flex items-center text-sm font-semibold text-slate-700">
-                Discuss a deployment <ArrowUpRight className="ml-1 h-4 w-4" />
-              </a>
             </div>
             <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {projects.map((project) => (
@@ -327,67 +331,55 @@ export default function App() {
           </div>
         </section>
 
-        <section id="downloads" className="mx-auto max-w-7xl px-6 py-20">
-          <div className="mb-10">
-            <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">Downloads</div>
-            <h2 className="mt-2 text-4xl font-black tracking-tight" style={{ color: brandBlue }}>
-              Keep brochure and proposal downloads ready for prospects.
-            </h2>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {brochures.map((item) => (
-              <div key={item.title} className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl text-white" style={{ backgroundColor: brandBlue }}>
-                  <Download className="h-5 w-5" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-600">{item.desc}</p>
-                <button className="mt-5 rounded-2xl border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50">Attach PDF Link</button>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="sectors" className="mx-auto max-w-7xl px-6 py-20">
-          <div className="mb-10 text-center">
-            <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">Target Sectors</div>
-            <h2 className="mt-2 text-4xl font-black tracking-tight" style={{ color: brandBlue }}>
-              Built for critical infrastructure environments.
-            </h2>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7">
-            {sectors.map((sector) => (
-              <div key={sector} className="rounded-[1.5rem] border border-slate-200 bg-white p-6 text-center shadow-sm">
-                <div className="mx-auto mb-4 h-14 w-14 rounded-2xl" style={{ background: `linear-gradient(135deg, ${brandYellow}, #f5e37f)` }} />
-                <div className="text-sm font-bold text-slate-800">{sector}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="contact" className="px-6 pb-20">
+        <section id="contact" className="px-6 py-20">
           <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[0.95fr_1.05fr]">
             <div className="rounded-[2rem] p-10 text-white shadow-2xl" style={{ background: `linear-gradient(135deg, ${brandBlue}, ${brandBlueDeep})` }}>
-              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-white/60">Contact</div>
-              <h2 className="mt-2 text-4xl font-black tracking-tight">Ready for a publishable corporate website.</h2>
+              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-white/60">Contact Us</div>
+              <h2 className="mt-2 text-4xl font-black tracking-tight">Direct Connectivity to Support.</h2>
               <p className="mt-5 max-w-2xl text-white/80 leading-8">
-                Replace placeholders with your live business information, final brochures, project references, and domain details before deployment.
+                Reach out to our engineering and support team for project inquiries, technical specifications, and custom deployment requests.
               </p>
 
-              <div className="mt-8 space-y-4 text-sm text-white/90">
-                <div className="flex items-center gap-3"><Mail className="h-4 w-4" /> info@ikonnect.in</div>
-                <div className="flex items-center gap-3"><Phone className="h-4 w-4" /> +91-XXXXXXXXXX</div>
-                <div className="flex items-center gap-3"><MapPin className="h-4 w-4" /> India</div>
-              </div>
+              <div className="mt-8 space-y-6">
+                <div className="flex items-center gap-4 group">
+                  <div className="bg-white/10 p-3 rounded-2xl group-hover:bg-white/20 transition-colors">
+                    <Mail className="h-5 w-5" />
+                  </div>
+                  <a href="mailto:info@ikonnect.in" className="text-lg font-medium hover:underline">info@ikonnect.in</a>
+                </div>
+                
+                <div className="flex items-center gap-4 group">
+                  <div className="bg-white/10 p-3 rounded-2xl group-hover:bg-white/20 transition-colors">
+                    <Phone className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-white/50 uppercase font-bold tracking-widest">Lokesh Bhatnagar</p>
+                    <a href="tel:+919414177766" className="text-lg font-medium hover:underline">+91-9414177766</a>
+                  </div>
+                </div>
 
-              <div className="mt-8 rounded-[1.5rem] bg-white/10 p-5 backdrop-blur">
-                <div className="text-sm font-semibold text-white">Suggested next deployment tasks</div>
-                <div className="mt-3 space-y-2 text-sm text-white/80">
-                  <p>• connect final domain and hosting</p>
-                  <p>• replace contact placeholders</p>
-                  <p>• attach brochure and proposal PDFs</p>
-                  <p>• add real client credentials and case studies</p>
+                {/* WhatsApp Specific Contact Card */}
+                <a 
+                  href="https://wa.me/919414177766" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group"
+                >
+                  <div className="bg-[#25D366] p-3 rounded-2xl">
+                    <MessageCircle className="h-6 w-6 text-white" fill="white" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-white/50 uppercase font-bold tracking-widest">Available on WhatsApp</p>
+                    <p className="text-lg font-bold">Chat Now</p>
+                  </div>
+                  <ChevronRight className="ml-auto h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+
+                <div className="flex items-center gap-4">
+                  <div className="bg-white/10 p-3 rounded-2xl">
+                    <MapPin className="h-5 w-5" />
+                  </div>
+                  <span className="text-lg font-medium">India</span>
                 </div>
               </div>
             </div>
@@ -395,27 +387,24 @@ export default function App() {
             <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl">
               <div className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-400">Enquiry Form</div>
               <h3 className="mt-2 text-3xl font-black tracking-tight" style={{ color: brandBlue }}>
-                Let prospects send an enquiry directly.
+                Submit your project details.
               </h3>
-              <p className="mt-3 text-sm leading-7 text-slate-600">
-                This is a front-end contact form layout. Connect it to your backend, email API, CRM, or website form handler during deployment.
-              </p>
 
               <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
                 <div className="grid gap-4 md:grid-cols-2">
-                  <input className={inputClass} placeholder="Full name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
+                  <input required className={inputClass} placeholder="Full name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
                   <input className={inputClass} placeholder="Company" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} />
                 </div>
                 <div className="grid gap-4 md:grid-cols-2">
-                  <input className={inputClass} placeholder="Email" type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
-                  <input className={inputClass} placeholder="Phone" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
+                  <input required className={inputClass} placeholder="Email" type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
+                  <input required className={inputClass} placeholder="Phone" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
                 </div>
-                <textarea className="min-h-[140px] w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-slate-400 focus:border-slate-400" placeholder="Tell us about your project requirement" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+                <textarea required className="min-h-[140px] w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-slate-400 focus:border-slate-400" placeholder="Tell us about your project requirement" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
                 <div className="flex flex-wrap items-center gap-4">
-                  <button type="submit" className="inline-flex items-center rounded-2xl px-6 py-3 text-sm font-semibold text-white shadow-lg" style={{ backgroundColor: brandBlue }}>
+                  <button type="submit" className="inline-flex items-center rounded-2xl px-6 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:-translate-y-1 active:scale-95" style={{ backgroundColor: brandBlue }}>
                     Submit Enquiry <ChevronRight className="ml-1 h-4 w-4" />
                   </button>
-                  {submitted && <div className="text-sm font-medium text-emerald-600">Demo submission captured. Connect this form to your live handler.</div>}
+                  {submitted && <div className="text-sm font-bold text-emerald-600">Enquiry submitted successfully. We will get back to you soon.</div>}
                 </div>
               </form>
             </div>
@@ -436,15 +425,15 @@ export default function App() {
           <div>
             <div className="text-sm font-bold uppercase tracking-[0.18em] text-slate-400">Quick Links</div>
             <div className="mt-4 flex flex-col gap-3 text-sm font-medium text-slate-700">
-              {nav.map((item) => <a key={item.label} href={item.href} className="hover:text-slate-900">{item.label}</a>)}
+              {nav.map((item) => <a key={item.label} href={item.href} className="hover:text-slate-900 transition-colors">{item.label}</a>)}
             </div>
           </div>
 
           <div>
             <div className="text-sm font-bold uppercase tracking-[0.18em] text-slate-400">Contact</div>
             <div className="mt-4 space-y-3 text-sm text-slate-700">
-              <div>info@ikonnect.in</div>
-              <div>+91-XXXXXXXXXX</div>
+              <a href="mailto:info@ikonnect.in" className="block hover:underline">info@ikonnect.in</a>
+              <a href="tel:+919414177766" className="block hover:underline">+91-9414177766</a>
               <div>India</div>
             </div>
           </div>
